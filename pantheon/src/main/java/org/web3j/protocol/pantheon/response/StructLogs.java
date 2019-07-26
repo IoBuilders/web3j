@@ -20,7 +20,7 @@ public class StructLogs {
 
     private int pc;
     private String op;
-    private int gas;
+    private long gas;
     private int gasCost;
     private int depth;
     private List<String> stack;
@@ -34,7 +34,7 @@ public class StructLogs {
     public StructLogs(
             int pc,
             String op,
-            int gas,
+            long gas,
             int gasCost,
             int depth,
             List<String> stack,
@@ -60,7 +60,7 @@ public class StructLogs {
         this.op = op;
     }
 
-    public void setGas(int gas) {
+    public void setGas(long gas) {
         this.gas = gas;
     }
 
@@ -96,7 +96,7 @@ public class StructLogs {
         return op;
     }
 
-    public int getGas() {
+    public long getGas() {
         return gas;
     }
 
