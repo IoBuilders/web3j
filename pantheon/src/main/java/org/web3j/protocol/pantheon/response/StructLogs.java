@@ -27,6 +27,9 @@ public class StructLogs {
     private List<String> memory;
     private Map<BigInteger, String> storage;
 
+    public StructLogs() {
+    }
+
     public StructLogs(
             int pc,
             String op,
