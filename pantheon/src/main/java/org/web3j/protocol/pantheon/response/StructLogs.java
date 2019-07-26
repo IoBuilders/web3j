@@ -26,6 +26,7 @@ public class StructLogs {
     private List<String> stack;
     private List<String> memory;
     private Map<BigInteger, String> storage;
+    private String reason;
 
     public StructLogs() {
     }
@@ -38,7 +39,8 @@ public class StructLogs {
             int depth,
             List<String> stack,
             List<String> memory,
-            Map<BigInteger, String> storage) {
+            Map<BigInteger, String> storage,
+            String reason) {
         this.pc = pc;
         this.op = op;
         this.gas = gas;
@@ -47,6 +49,7 @@ public class StructLogs {
         this.stack = stack;
         this.memory = memory;
         this.storage = storage;
+        this.reason = reason;
     }
 
     public void setPc(int pc) {
@@ -81,6 +84,10 @@ public class StructLogs {
         this.storage = storage;
     }
 
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
     public int getPc() {
         return pc;
     }
@@ -111,5 +118,9 @@ public class StructLogs {
 
     public Map<BigInteger, String> getStorage() {
         return storage;
+    }
+
+    public String getReason() {
+        return reason;
     }
 }
